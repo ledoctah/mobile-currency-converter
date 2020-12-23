@@ -12,7 +12,7 @@ export default function App() {
         api.get('/json/all').then(response => {
             const currencies = Object.keys(response.data).map(code => {
                 return {
-                    code: response.data[code].code,
+                    code: code,
                     name: response.data[code].name
                 }
             });

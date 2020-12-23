@@ -57,67 +57,6 @@ export default function ComboBox(props) {
     )
 }
 
-/*export class ComboBox extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selectedCurrency: '',
-            currencyValue: 0
-        };
-    }
-
-    handleUpdateCurrency = (currency) => {
-        this.setState({
-            currencyValue: this.state.currencyValue,
-            selectedCurrency: currency
-        });
-    }
-
-    handleUpdateCurrencyValue = (value) => {
-        this.setState({
-            selectedCurrency: this.state.selectedCurrency,
-            currencyValue: value.replace(/\D/g, '')/100
-        });
-    }
-
-    render() {
-        return (
-            <View style={styles.currencyContainer}>
-                <Text style={styles.title}>{this.props.title}</Text>
-
-                <View style={styles.input}>
-                    <TextInput
-                        placeholder="Digite o valor"
-                        keyboardType='numeric'
-                        onChangeText={(text) => this.handleUpdateCurrencyValue(text)}
-                        defaultValue={this.state.currencyValue}
-                        value={this.state.currencyValue}
-                    />
-                </View>
-
-                <View style={styles.comboBox}>
-                    <Picker selectedValue={this.state.selectedCurrency} onValueChange={this.handleUpdateCurrency}>
-                        {this.props.currencies.map(currency => 
-
-                        <Picker.Item
-                            label={currency.name} 
-                            value={currency.code}
-                            key={currency.code}
-                        />
-
-                        )}
-                    </Picker>
-                </View>
-            </View>
-        )
-    }
-}
-
-export default ComboBox;
-*/
-
 const styles = StyleSheet.create({
     currencyContainer: {
         padding: 12
